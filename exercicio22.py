@@ -10,3 +10,22 @@
     a ser pago pelo cliente sabendo-se que o preço do litro da gasolina é R$ 2,50 o preço do litro do álcool 
     é R$ 1,90.
 '''
+
+alcool = 1.90
+gasolina = 2.50
+
+litros = float(input('Digite a quantidade de litros: '))
+tipo = input('Digite o tipo de combustível (A-álcool, G-gasolina): ')
+
+if tipo == 'A':
+    if litros <= 20:
+        print(f'Valor a ser pago: R$ {litros * alcool * 0.97:.2f}')
+    else:
+        print(f'Valor a ser pago: R$ {litros * alcool * 0.95:.2f}')
+elif tipo == 'G':
+    if litros <= 20:
+        print(f'Valor a ser pago: R$ {litros * gasolina * 0.96:.2f}')
+    else:
+        print(f'Valor a ser pago: R$ {litros * gasolina * 0.94:.2f}')
+else:
+    print('Opção inválida')
